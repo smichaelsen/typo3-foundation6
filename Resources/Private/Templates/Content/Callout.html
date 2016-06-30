@@ -1,0 +1,25 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+
+<f:layout name="Content"/>
+
+<f:section name="Configuration">
+	<flux:form id="callout" options="{group:'Foundation', icon:'{f:uri.resource(extensionName:\'foundation6\',path:\'Icons/Components/callout.png\')}'}">
+		<flux:field.text name="content" enableRichText="true"/>
+		<flux:field.select items="primary,secondary,success,warning,alert" emptyOption="default" name="type"/>
+	</flux:form>
+</f:section>
+
+<f:section name="Preview">
+	<f:translate key="flux.{form.id}"/>
+</f:section>
+
+<f:section name="Main">
+	<f:format.raw>
+		<div class="callout{f:if(condition:type, then:' type')}">
+			<h1>{record.header}</h1>
+			{content -> f:format.html()}
+		</div>
+	</f:format.raw>
+</f:section>
+
+</html>

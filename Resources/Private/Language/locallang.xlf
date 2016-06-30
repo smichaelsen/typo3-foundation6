@@ -3,11 +3,17 @@
 	<file source-language="en" datatype="plaintext" original="messages" product-name="foundation6">
 		<header/>
 		<body>
+			<trans-unit id="flux.callout">
+				<source>Callout</source>
+			</trans-unit>
+			<trans-unit id="flux.callout.description">
+				<source>Callout is Foundation's generic highlighted container component. You may fill it with rich text.</source>
+			</trans-unit>
 			<trans-unit id="flux.orbit">
 				<source>Orbit</source>
 			</trans-unit>
 			<trans-unit id="flux.orbit.description">
-				<source>Orbit is Foundation's Slider component. You can add images and video links.</source>
+				<source>Orbit is Foundation's slider component. You can add images and video links.</source>
 			</trans-unit>
 		</body>
 	</file>
