@@ -32,7 +32,6 @@ module.exports = function (grunt) {
 					'Resources/Public/Build/main.js': [
 						foundationPath + 'vendor/jquery/dist/jquery.js',
 						foundationPath + 'dist/foundation.js',
-						'Resources/Private/FrontendSources/javascript/jQuery.*.js',
 						'Resources/Private/FrontendSources/javascript/app.js'
 					]
 				}
