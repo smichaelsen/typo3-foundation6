@@ -1,6 +1,17 @@
 module.exports = function (grunt) {
 
 	var foundationPath = 'node_modules/foundation-sites/';
+	var loadPaths = [];
+
+	var typo3FoundationConfigFile = '../../../foundation6.json';
+	if (grunt.file.exists(typo3FoundationConfigFile)) {
+		var typo3FoundationConfig = grunt.file.readJSON(typo3FoundationConfigFile);
+		if (typo3FoundationConfig.foundationSettingsPath) {
+			loadPaths.push('../../../' + typo3FoundationConfig.foundationSettingsPath);
+		}
+	}
+
+	loadPaths.push(foundationPath + 'scss');
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -8,7 +19,7 @@ module.exports = function (grunt) {
 			dist: {
 				options: {
 					style: 'expanded',
-					loadPath: [foundationPath + 'scss']
+					loadPath: loadPaths
 				},
 				files: {
 					'Resources/Public/Build/main.css': 'Resources/Private/FrontendSources/sass/app.scss'

@@ -1,0 +1,2 @@
+page.includeCSS.tx_foundation6 = EXT:foundation6/Resources/Public/Build/main.css
+page.includeJSLibs.tx_foundation6 = EXT:foundation6/Resources/Public/Build/main.js
