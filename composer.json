@@ -10,7 +10,7 @@
     },
     "require": {
         "typo3/cms-core": "^8.1",
-        "fluidtypo3/fluidcontent": "5.*",
+        "fluidtypo3/fluidcontent": "5.*"
     },
     "replace": {
         "foundation6": "self.version",
