@@ -1,0 +1,24 @@
+{
+    "name": "smichaelsen/foundation6",
+    "description": "Foundation 6 framework and components for TYPO3. Based on EXT:fluidcontent",
+    "type": "typo3-cms-extension",
+    "license": "GPL-2.0+",
+    "autoload": {
+        "psr-4": {
+            "Smichaelsen\\Foundation6\\": "Classes/"
+        }
+    },
+    "require": {
+        "typo3/cms-core": "^8.1",
+        "fluidtypo3/fluidcontent": "5.*",
+    },
+    "replace": {
+        "foundation6": "self.version",
+        "typo3-ter/foundation6": "self.version"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
