@@ -15,6 +15,30 @@
 			<trans-unit id="flux.orbit.description">
 				<source>Orbit is Foundation's slider component. You can add images and video links.</source>
 			</trans-unit>
+			<trans-unit id="flux.threeColumns">
+				<source>3 Columns</source>
+			</trans-unit>
+			<trans-unit id="flux.threeColumns.description">
+				<source>A three columns grid element with adjustable breakpoint and distribution.</source>
+			</trans-unit>
+			<trans-unit id="flux.threeColumns.fields.breakpoint">
+				<source>Starting from which size (upwards) the columns should be displayed side-by-side instead of below each other.</source>
+			</trans-unit>
+			<trans-unit id="flux.threeColumns.fields.distribution">
+				<source>Distribution</source>
+			</trans-unit>
+			<trans-unit id="flux.twoColumns">
+				<source>2 Columns</source>
+			</trans-unit>
+			<trans-unit id="flux.twoColumns.description">
+				<source>A two columns grid element with adjustable breakpoint and distribution.</source>
+			</trans-unit>
+			<trans-unit id="flux.twoColumns.fields.breakpoint">
+				<source>Starting from which size (upwards) the columns should be displayed side-by-side instead of below each other.</source>
+			</trans-unit>
+			<trans-unit id="flux.twoColumns.fields.distribution">
+				<source>Distribution</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

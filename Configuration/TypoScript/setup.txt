@@ -1,2 +1,5 @@
-page.includeCSS.tx_foundation6 = EXT:foundation6/Resources/Public/Build/main.css
-page.includeJSLibs.tx_foundation6 = EXT:foundation6/Resources/Public/Build/main.js
+page {
+    meta.viewport = width=device-width, initial-scale=1.0
+    includeCSS.tx_foundation6 = EXT:foundation6/Resources/Public/Build/main.css
+    includeJSLibs.tx_foundation6 = EXT:foundation6/Resources/Public/Build/main.js
+}

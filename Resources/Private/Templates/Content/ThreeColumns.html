@@ -1,0 +1,59 @@
+<html data-namespace-typo3-fluid="true" xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers" xmlns:flux="http://typo3.org/ns/FluidTYPO3/Flux/ViewHelpers" xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+
+<f:layout name="Content"/>
+
+<f:section name="Configuration">
+	<flux:form id="threeColumns" options="{group:'Foundation', icon:'{f:uri.resource(extensionName:\'foundation6\',path:\'Icons/Components/threeColumns.png\')}'}">
+		<flux:grid>
+			<flux:grid.row>
+				<flux:grid.column name="a" />
+				<flux:grid.column name="b" />
+				<flux:grid.column name="c" />
+			</flux:grid.row>
+		</flux:grid>
+		<flux:field.select name="distribution" items="33-33-33,50-25-25,25-50-25,25-25-50" default="33-33-33"/>
+		<flux:field.select name="breakpoint" items="small,medium,large" default="small"/>
+	</flux:form>
+</f:section>
+
+<f:section name="Preview">
+	<flux:grid/>
+</f:section>
+
+<f:section name="Main">
+	<f:switch expression="{distribution}">
+		<f:case value="50-25-25">
+			<v:variable.set name="column-1-class">{breakpoint}-6</v:variable.set>
+			<v:variable.set name="column-2-class">{breakpoint}-3</v:variable.set>
+			<v:variable.set name="column-3-class">{breakpoint}-3</v:variable.set>
+		</f:case>
+		<f:case value="25-50-25">
+			<v:variable.set name="column-1-class">{breakpoint}-3</v:variable.set>
+			<v:variable.set name="column-2-class">{breakpoint}-6</v:variable.set>
+			<v:variable.set name="column-3-class">{breakpoint}-3</v:variable.set>
+		</f:case>
+		<f:case value="25-25-50">
+			<v:variable.set name="column-1-class">{breakpoint}-3</v:variable.set>
+			<v:variable.set name="column-2-class">{breakpoint}-3</v:variable.set>
+			<v:variable.set name="column-3-class">{breakpoint}-6</v:variable.set>
+		</f:case>
+		<f:case default="true">
+			<v:variable.set name="column-1-class">{breakpoint}-4</v:variable.set>
+			<v:variable.set name="column-2-class">{breakpoint}-4</v:variable.set>
+			<v:variable.set name="column-3-class">{breakpoint}-4</v:variable.set>
+		</f:case>
+	</f:switch>
+	<div class="threecolumns-element row">
+		<div class="columns {column-1-class}">
+			<flux:content.render area="a"/>
+		</div>
+		<div class="columns {column-2-class}">
+			<flux:content.render area="b"/>
+		</div>
+		<div class="columns {column-3-class}">
+			<flux:content.render area="c"/>
+		</div>
+	</div>
+</f:section>
+
+</html>
