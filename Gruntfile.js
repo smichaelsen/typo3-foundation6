@@ -1,23 +1,13 @@
 module.exports = function (grunt) {
 
 	var foundationPath = 'node_modules/foundation-sites/';
-
-	var backPath = '../../../';
 	var loadPaths = [];
-	var scssWatchPaths = [
-		'Resources/Private/FrontendSources/sass/*.scss',
-		'Resources/Private/FrontendSources/sass/*/*.scss',
-		'Resources/Private/FrontendSources/sass/*/*/*.scss'
-	];
 
 	var typo3FoundationConfigFile = '../../../foundation6.json';
 	if (grunt.file.exists(typo3FoundationConfigFile)) {
 		var typo3FoundationConfig = grunt.file.readJSON(typo3FoundationConfigFile);
 		if (typo3FoundationConfig.foundationSettingsPath) {
-			loadPaths.push(backPath + typo3FoundationConfig.foundationSettingsPath);
-			scssWatchPaths.push(backPath + typo3FoundationConfig.foundationSettingsPath + '*.scss');
-			scssWatchPaths.push(backPath + typo3FoundationConfig.foundationSettingsPath + '*/*.scss');
-			scssWatchPaths.push(backPath + typo3FoundationConfig.foundationSettingsPath + '*/*/*.scss');
+			loadPaths.push('../../../' + typo3FoundationConfig.foundationSettingsPath);
 		}
 	}
 
@@ -49,7 +39,7 @@ module.exports = function (grunt) {
 		},
         watch: {
             css: {
-                files: scssWatchPaths,
+                files: ['Resources/Private/FrontendSources/sass/*.scss', 'Resources/Private/FrontendSources/sass/*/*.scss', 'Resources/Private/FrontendSources/sass/*/*/*.scss'],
                 tasks: ['sass']
             },
 			js: {
