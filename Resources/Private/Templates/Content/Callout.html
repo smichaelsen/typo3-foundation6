@@ -15,7 +15,7 @@
 
 <f:section name="Main">
 	<f:format.raw>
-		<div class="callout{f:if(condition:type, then:' type')}">
+		<div class="callout{f:if(condition:type, then:' {type}')}">
 			<h1>{record.header}</h1>
 			{content -> f:format.html()}
 		</div>
